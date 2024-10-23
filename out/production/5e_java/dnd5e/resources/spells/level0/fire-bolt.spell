@@ -1,0 +1,12 @@
+5ESPELL
+0000 0011
+Fire Bolt
+0001 0011
+1 01111000
+1 1 0
+0 0000 000
+1 0 0 0 0 0 1 0 1 0
+
+You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn’t being worn or carried.
+
+This spell’s damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).
