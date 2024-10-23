@@ -1,30 +1,36 @@
 package dnd5e;
 
 import dnd5e.characterclasses.*;
-import dnd5e.characterclasses.casters.*;
 
 import java.util.Scanner;
 
 public class CharacterCreator {
-    public void creator() {
-        Scanner in = new Scanner(System.in);
+    private final Scanner in;
+    public CharacterCreator(Scanner in) {
+        this.in = in;
+    }
+
+    public Player creator() {
         int charClass = in.nextInt();
+        Player pc;
 
         switch (charClass) {
-            case 1 -> createArtificer();
-            case 2 -> createBarbarian();
-            case 3 -> createBard();
-            case 4 -> createCleric();
-            case 5 -> createDruid();
-            case 6 -> createFighter();
-            case 7 -> createMonk();
-            case 8 -> createPaladin();
-            case 9 -> createRanger();
-            case 10 -> createRogue();
-            case 11 -> createWarlock();
-            case 12 -> createWarrior();
-            case 13 -> createWizard();
+            case 1  -> pc = createArtificer();
+            case 2  -> pc = createBarbarian();
+            case 3  -> pc = createBard();
+            case 4  -> pc = createCleric();
+            case 5  -> pc = createDruid();
+            case 6  -> pc = createFighter();
+            case 7  -> pc = createMonk();
+            case 8  -> pc = createPaladin();
+            case 9  -> pc = createRanger();
+            case 10 -> pc = createRogue();
+            case 11 -> pc = createWarlock();
+            case 12 -> pc = createWarrior();
+            case 13 -> pc = createWizard();
+            default -> pc = null;
         }
+        return pc;
     }
     private Artificer createArtificer() {
         Artificer playerArtificer = new Artificer();

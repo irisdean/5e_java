@@ -2,7 +2,7 @@
 
 Top Line: The identifier for the spell file.
 
-Line 2: The spell level (0 for cantrips), followed by type following this format:
+Line 2: The 4 bit spell level (0 for cantrips), followed by type following this format (4 bits):
 
 - Conjuration: 1
 - Necromancy: 2
@@ -18,7 +18,7 @@ Line 3: The name of the spell
 
 Line 4: Casting Time
 
-First is the quantity, then the units following this guide.
+First is the quantity (4 bits), then the units following this guide (4 bits).
 
 - Reaction: 1
 - Bonus Action: 2
@@ -26,11 +26,11 @@ First is the quantity, then the units following this guide.
 - Minute: 4
 - Hour: 5
 
-Line 5: The range in feet, preceded by 0 for self, 1 for not.
+Line 5: The range in feet, preceded by 0 for self, 1 for not (1 bit, 8 bits).
 
 Line 6: The components of the spell in the order Visual, Somatic, and Material.
 
-Line 7: Duration following this guide, with concentration first:
+Line 7: Duration following this guide, with concentration first (1 bit, 4 bits, 3 bits):
 
 - Instantaneous: 0
 - Round: 1

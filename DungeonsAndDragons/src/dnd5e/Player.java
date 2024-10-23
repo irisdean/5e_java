@@ -17,4 +17,7 @@ public abstract class Player implements Character{
     public int defend() {
         return 0;
     }
+    public String getName() {
+        return this.getClass().getSimpleName();
+    }
 }
